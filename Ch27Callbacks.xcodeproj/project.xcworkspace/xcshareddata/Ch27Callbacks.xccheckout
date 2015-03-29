@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70ADAB0D-201D-41E9-8636-53E8CBEC6C7C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ch27Callbacks</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E87D88CDBEE5D95B9619ED7C48284A693A9C05FB</key>
+		<string>https://github.com/rebornwhu/Ch27Callbacks.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ch27Callbacks.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E87D88CDBEE5D95B9619ED7C48284A693A9C05FB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rebornwhu/Ch27Callbacks.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E87D88CDBEE5D95B9619ED7C48284A693A9C05FB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E87D88CDBEE5D95B9619ED7C48284A693A9C05FB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ch27Callbacks</string>
+		</dict>
+	</array>
+</dict>
+</plist>
