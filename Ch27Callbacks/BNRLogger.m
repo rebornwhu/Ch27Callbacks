@@ -8,6 +8,11 @@
 
 #import "BNRLogger.h"
 
+@interface BNRLogger()
+- (void)zoneChange:(NSNotification *)note;
+@end
+
+
 @implementation BNRLogger
 
 - (NSString *)lastTimeString
@@ -44,10 +49,28 @@
 }
 
 
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    NSLog(@"Got it all!");
+    NSString *string = [[NSString alloc] initWithData:_incomingData
+                                             encoding:NSUTF8StringEncoding];
+    _incomingData = nil;
+    NSLog(@"string has %lu characters", [string length]);
+    
+    NSLog(@"The whole string is %@", string);
+}
+
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"connection failed: %@", [error localizedDescription]);
     _incomingData = nil;
+}
+
+
+- (void)zoneChange:(NSNotification *)note
+{
+    NSLog(@"The system time zone has changed!");
 }
 
 @end
