@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRLogger.h"
+#import "BNRObserver.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -19,13 +20,13 @@ int main(int argc, const char * argv[]) {
 //                                                 selector:@selector(zoneChange:)
 //                                                     name:NSSystemTimeZoneDidChangeNotification
 //                                                   object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserverForName:NSSystemClockDidChangeNotification
-                                                          object:nil
-                                                           queue:nil
-                                                      usingBlock:^(NSNotification *note) {
-                                                          NSLog(@"The system time zone has changed!");
-                                                      }];
+//        
+//        [[NSNotificationCenter defaultCenter] addObserverForName:NSSystemClockDidChangeNotification
+//                                                          object:nil
+//                                                           queue:nil
+//                                                      usingBlock:^(NSNotification *note) {
+//                                                          NSLog(@"The system time zone has changed!");
+//                                                      }];
         
 
         // Callback type 2: helper object or delegate
@@ -37,13 +38,17 @@ int main(int argc, const char * argv[]) {
 //                                                                      startImmediately:YES];
         
         // Callback type 1: target-action: timer
-        /*
         __unused NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2.0
                                                                    target:logger
                                                                  selector:@selector(updateLastTime:)
                                                                  userInfo:nil
                                                                   repeats:YES];
-         */
+
+        __unused BNRObserver *observer = [[BNRObserver alloc] init];
+        [logger addObserver:observer
+                 forKeyPath:@"lastTime"
+                    options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                    context:nil];
         
         [[NSRunLoop currentRunLoop] run];
     }
